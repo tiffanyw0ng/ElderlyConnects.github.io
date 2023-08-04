@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+	
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+ 
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+ 
+		  table {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			margin: 0 auto;
+			}
+
+			tr {
+			display: flex;
+			justify-content: center;
+			}
+
+			td {
+			width: auto;
+			height: 300px; /* Increase the height to make the table bigger */
+			background-color: rgb(255, 255, 255);
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+			margin: 10px; /* Add margin to create some separation between cells */
+			}
+
+			td.a {
+			background-position: 0 0;
+			}
+
+			td.b {
+			background-position: -8.8667em 0;
+			}
+
+			td.c {
+			background-position: -17.7333em 0;
+			}
+
+			td.a1 {
+			background-position: 0 -8.8667em;
+			}
+
+			td.b1 {
+			background-position: -8.8667em -8.8667em;
+			}
+
+			td.c1 {
+			background-position: -17.7333em -8.8667em;
+			}
+
+			td.a2 {
+			background-position: 0 -17.7333em;
+			}
+
+			td.b2 {
+			background-position: -8.8667em -17.7333em;
+			}
+
+			td.c2 {
+			background-position: -17.7333em -17.7333em;
+			}
+			td img {
+			height: 120%; /* Set the height to 100% to fill the cell */
+			width: 120%; /* Set the width to 100% to fill the cell */
+			object-fit: cover; /* Use object-fit to ensure the image fills the cell without distortion */
+			}
+			/* td img {
+			height: 233px;
+			margin: 0 auto 10px;
+			vertical-align: middle;
+			} */
+
+			a {
+			text-decoration: none;
+			}
+
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="index1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="index.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+  <img class="image" src="2banner.png"style="vertical-align: top;">
+	<div class="menu">
+		<div class="menu-item">
+		<a href="abouts.html">About Us</a>
+		</div>
+		<div class="menu-item">
+		<a href="Governmentassistance.html">Government Assistance</a>
+		</div>
+		<div class="menu-item">
+		<a href="Accommodation.html">Accommodation </a>
+		</div> 
+		<div class="menu-item">
+		<a href="FoodDriveandItemsGiveaway.html">Food & Items Giveaway </a>
+		</div>
+		<div class="menu-item">
+		<a href="Employment.html">Employment</a>
+		</div>
+		<div class="menu-item">
+		<a href="GoldenAgeConnec.html">GoldenAgeConnect</a>
+		</div>
+		<div class="menu-item">
+		<a href="Howtohelp.html">How to Help  </a>
+		</div>
+		
+		
+	</div>
+  </div>
+  <br>
+  
+  <div style="margin-left: 20%; margin-right: 20%;">
+	  <table>
+	  			<tr>
+	  				<td class="a">
+						<div>
+							<a href="Governmentassistance1.html" >
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%;white-space: nowrap;"src="3Governmentassistance.jpg" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px;">Government Assistance</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  				<td class="b">
+						<div>
+							<a href="Accommodation.html">
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%"src="4Accomodation.jpg" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px;">Accommodation</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  				<td class="c">
+						<div>
+							<a href="FoodDriveandItemsGiveaway.html">
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%"src="5FoodDrive.jpg" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px;">Food & Items Giveaway</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  			</tr>
+				
+	  			<tr >
+	  				<td class="a1">
+						<div>
+							<a href="Employment.html">
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%"src="6Employment.jpeg" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px; ">Employment</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  				<td class="b1">
+						<div>
+							<a href="GoldenAgeConnec.html">
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%"src="7GoldenConnect.png" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px; ">GoldenAgeConnect</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  				<td class="c1">
+						<div>
+							<a href="Howtohelp.html">
+								<img class="hmg"  style="width: 96%;height: 200px; margin-left: 2%;margin-right: 2%"src="8Help.jpg" alt="图片6">
+								<div class="image-name-container">
+								  <h3 class="image-name" style="font-size: 20px; ">How to Help?</h3>
+								</div>
+							</a>
+						</div>
+					</td>
+	  			</tr>
+	  		
+	  		</table>
+			<br>
+			<br>
+		
+			
+	
+  </div>
+
+
+  <div style="margin-left: 20%; margin-right: 20%;">
+  	<p style="margin:0pt; orphans:0; text-align:center; widows:0"><span
+  			style="font-family:Calibri;  ; font-weight:bold">About Us</span></p>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ; font-weight:bold">We </span><span
+  			style="font-family:Calibri;  ">are a team of dedicated volunteers who are determined
+  			to make a difference to help the elderly population in Hong Kong. The income discrepancy in Hong
+  			Kong is huge. It is one of the worst among developed nations. One in five people sit below poverty
+  			line (before taking government aid into account). Some poor elderly individuals are cage residents
+  			and majority of the homeless people are elderly. </span></p>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ">Although government and some organizations are
+  			providing </span><span style="font-family:Calibri;  ">services  and</span><span
+  			style="font-family:Calibri;  "> facilities to assist elderly people to enjoy a
+  			quality life, elderly people usually find difficult in locating relevant information online. To
+  			assist elderly people to easily locate the services they need, we build a comprehensive and easily
+  			accessible website to provide ample information in one place. We also establish a </span><span
+  			style="font-family:Calibri;  ">whatsapp</span><span
+  			style="font-family:Calibri;  "> line to devote in helping elderly people for any
+  			enquiry they have when browsing the website. </span></p>
+			<br>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ">We will regular update our website, please come back
+  			from time to time. </span></p>
+  	<p style="float: right; margin-right: 10%;  orphans:0; text-align:justify; widows:0"><span
+  			style="width:21pt; text-indent:0pt; display:inline-block"></span><span
+  			style="width:21pt; text-indent:0pt; display:inline-block"></span><span
+  			style="width:21pt; text-indent:0pt; display:inline-block"></span><span
+  			style="width:21pt; text-indent:0pt; display:inline-block"></span><span
+  			style="width:21pt; text-indent:0pt; display:inline-block"></span><span
+  			style="font-family:Calibri;  ">                           
+  			                                                                                                                                       
+  			                                              </span>
+  														  
+  														  <span
+  			style="font-family:Calibri;  ">ElderlyConnect</span><span
+  			style="font-family:Calibri;  "> </span><span
+  			style="font-family:Calibri;  ; font-style:italic">Team</span>
+  			</p>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ; font-style:italic">&#xa0;</span></p>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ">&#xa0;</span></p>
+  	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+  			style="font-family:Calibri;  ">&#xa0;</span></p>
+					<br>
+					<br>	
+					<div style="display: flex; justify-content: flex-end;">
+						<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+							<img style="width: 180px;" src="9Whatsapp.png" alt="WhatsApp">
+						</a>
+					</div>
+					<br>
+					<br>
+
+
+	</div>
+	
+				
+				
+
+
+<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+		<a href="Privacy.html">Privacy policy</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer.html">Disclaimer</a>
+		</div>
+	</div> 
+				
+</body>
+</html>
+
