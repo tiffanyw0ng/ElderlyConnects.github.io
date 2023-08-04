@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+	
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+ 
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+
+
+			a {
+			text-decoration: none;
+			}
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+        </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Disclaimer1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Disclaimer.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+    <br>
+  
+  <div style="margin-left: 20%; margin-right: 20%;">
+	
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">免責聲明 </span></p>
+
+<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span style="font-family:Calibri; "> 本網站以及本網站提供的任何資料可能受版權保護。嚴禁未經授權使用、出版、複製、分發或利用此類材料。 
+    <br> a. 您使用本網站的風險由您自行承擔。您對任何內容的使用，包括對任何內容的準確性、完整性和可用性的依賴，均由您自行評估並承擔所有風險。特別是，每當您在本網站上或通過本網站獲取有關訊息時，此類信息僅供參考。對於任何內容，您必須尋求自己的獨立建議。 
+    <br> b. 我們將盡力提供一個方便實用的網站，但我們不能保證內容的正確性，也不能保證本網站或其運行的服務器不存在計算機病毒或其他有害組件。
+    <br> c. 我們將盡合理努力保留內容，但我們不承諾為內容提供支持或修復服務。我們強烈建議您對您在本網站上發布、保存或使用的任何內容進行備份。
+    <br> d. 如果您因使用本網站而需要修理或更換任何財產、材料、設備或數據，我們將不承擔相關費用。
+    <br> e. 在不限制前述規定的情況下，本網站上的所有內容（包括服務）均按“原樣”和“原樣”提供給您，不附有任何形式的明示或默示保證或條件，包括但不限於任何默示的適銷性保證、適合特定目的或不侵權。在任何適用法律允許的最大範圍內，我們排除與本網站提供的任何訊息或服務有關的所有陳述和保證，並聲明不承擔因以下原因引起、導致或與之相關的所有責任：(i) 您訪問本網站網站 (ii) 對本網站的任何使用； (iii) 對本網站任何資訊、內容或服務的任何使用。 
+    <br> f. 如果任何司法管轄區不允許排除e.款中的默示保證，但允許將責任限制在一定的最大範圍內，那麼我們將在該範圍內限制我們的責任。 
+</span></p>
+	<br>
+	<br>
+	
+
+    <div style="display: flex; justify-content: flex-end;">
+        <a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+            <img style="width: 180px;" src="9CWhatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <br>
+    <br>
+    
+
+
+</div>
+
+
+
+
+
+<div class="menu2">
+<div style="width: 70%; padding: 10px;font-size:20px;">
+<a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+</div>
+</div> 
+        
+</body>

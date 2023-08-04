@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+ 
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+ 
+		  table {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			margin: 0 auto;
+			}
+
+			tr {
+			display: flex;
+			justify-content: center;
+			}
+
+			td {
+			width: auto;
+			height: 300px; /* Increase the height to make the table bigger */
+			background-color: rgb(255, 255, 255);
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+			margin: 10px; /* Add margin to create some separation between cells */
+			}
+
+	
+			a {
+			text-decoration: none;
+			}
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Privacy1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Privacy.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+    <br>
+ 
+  
+  <div style="margin-left: 20%; margin-right: 20%;">
+	
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">隱私政策 </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">信息收集  </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">本網站將使用cookies和頁面標記來記錄訪問情況，但不會收集任何用戶的個人身份信息。</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-style:italic">Cookies</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Cookie 是當人們在計算機上訪問網站時在計算機中創建的少量數據。它通常包含匿名唯一標識符。 Cookie 可用於識別計算機。但是，它不用於收集任何個人信息。換句話說，它不具備識別網站個人用戶的功能。 Cookie 用於收集有關用戶訪問網站的次數以及用戶對網站和所提供的在線服務的偏好的統計數據。 您可以選擇接受或拒絕cookies。如果您拒絕cookie，您將無法使用某些功能。 
+        </span></p>
+	
+	<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">個人資料的提供</span>
+	</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">於不同目的及在不同時間，您可能會被邀請自願向網站提供個人數據。個人訊息可能包括姓名、電話號碼、郵寄地址或電子郵件地址。當邀請您提供資料時，會指明收集資料的目的和擬定用途，並建議您如何要求查閱或更正所提供的個人資料。 除非法律允許或要求，未經您事先同意，我們不會向任何第三方披露您的個人數據。 
+        </span></p>
+	
+  
+	<br>
+	<br>
+	<br>
+
+	
+
+				<div style="display: flex; justify-content: flex-end;">
+					<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+						<img style="width: 180px;" src="9CWhatsapp.png" alt="WhatsApp">
+					</a>
+				</div>
+				<br>
+				<br>
+				
+	
+	
+	</div>
+	
+			
+			
+	
+	
+    <div class="menu2">
+        <div style="width: 70%; padding: 10px;font-size:20px;">
+            <a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+            </div>
+        </div> 
+                    
+    </body>
+    </html>

@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+ 
+		  table {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			margin: 0 auto;
+			}
+
+			tr {
+			display: flex;
+			justify-content: center;
+			}
+
+			td {
+			width: auto;
+			height: 300px; /* Increase the height to make the table bigger */
+			background-color: rgb(255, 255, 255);
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+			margin: 10px; /* Add margin to create some separation between cells */
+			}
+
+			td.a {
+			background-position: 0 0;
+			}
+
+			td.b {
+			background-position: -8.8667em 0;
+			}
+
+			td.c {
+			background-position: -17.7333em 0;
+			}
+
+			td.a1 {
+			background-position: 0 -8.8667em;
+			}
+
+			td.b1 {
+			background-position: -8.8667em -8.8667em;
+			}
+
+			td.c1 {
+			background-position: -17.7333em -8.8667em;
+			}
+
+			td.a2 {
+			background-position: 0 -17.7333em;
+			}
+
+			td.b2 {
+			background-position: -8.8667em -17.7333em;
+			}
+
+			td.c2 {
+			background-position: -17.7333em -17.7333em;
+			}
+			td img {
+			height: 120%; /* Set the height to 100% to fill the cell */
+			width: 120%; /* Set the width to 100% to fill the cell */
+			object-fit: cover; /* Use object-fit to ensure the image fills the cell without distortion */
+			}
+			
+			a {
+			text-decoration: none;
+			}
+	
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Accommodation1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Accommodation.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+  <img class="image" src="2banner.png"style="vertical-align: top;">
+	<div class="menu">
+		<div class="menu-item">
+		<a href="abouts.html">About Us</a>
+		</div>
+		<div class="menu-item">
+		<a href="Governmentassistance.html">Government Assistance</a>
+		</div>
+		<div class="menu-item">
+		<a href="Accommodation.html">Accommodation </a>
+		</div> 
+		<div class="menu-item">
+		<a href="FoodDriveandItemsGiveaway.html">Food & Items Giveaway </a>
+		</div>
+		<div class="menu-item">
+		<a href="Employment.html">Employment</a>
+		</div>
+		<div class="menu-item">
+		<a href="GoldenAgeConnec.html">GoldenAgeConnect</a>
+		</div>
+		<div class="menu-item">
+		<a href="Howtohelp.html">How to Help  </a>
+		</div>
+		
+	</div>
+  </div>
+
+		<div style="margin-left: 20%; margin-right: 20%;">
+
+
+			
+		<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">Accommodation</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			<div style="float:right;width: 200px;margin-right: 10px;" ><img style="width: 350px; " src="15 home.jpg"/></div>
+			<span
+				style="font-family:Calibri;  ">The HKSAR government recognizes the importance of
+				providing stable living arraignment for elderly people and the following schemes or assistance are
+				provided: </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ;"><a href="#Elderlyhome">Elderly home</a> </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Publicrentalhousing">Public rental housing priority scheme</a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Assistanceforstayhome">Assistance for stay home elderly</a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Residentialcareservice">Residential care service voucher scheme</a>
+				</span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Centralizedwaitlistfor">Centralized waitlist for long-term care</a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Buildingmaintenance">Building maintenance subsidy scheme</a>
+				</span></p>
+				
+				
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">&#xa0;</span></p>
+		<p id="Elderlyhome" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">Elderly home </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Looking for elderly home? </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">People may choose to go to </span><span
+				style="font-family:Calibri;  ">an</span><span
+				style="font-family:Calibri;  "> for a variety of reasons. Some of the most common
+				reasons </span><span style="font-family:Calibri;  ">include</span><span
+				style="font-family:Calibri;  "> </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">- Need for ongoing medical care: elderly individuals
+				with chronic health conditions or disabilities may require specialized medical attention that is not
+				available in their own homes. Elderly homes can provide access to skilled nursing care,
+				rehabilitation services, and medical monitoring to help manage their health needs.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">- Many elderly individuals struggle with activities
+				such as bathing, dressing, and toileting, which can make it difficult to live independently. Elderly
+				homes </span><span style="font-family:Calibri;  ">offer assistance</span><span
+				style="font-family:Calibri;  "> with these and other daily tasks, ensuring that
+				residents can maintain their independence as much as possible.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">-Elderly individuals who live alone may experience
+				loneliness and social isolation, which can have negative effects on their mental and physical
+				health. In an elderly home, residents have opportunities to interact with other people and
+				participate in social activities, which can help combat feelings of loneliness and improve their
+				quality of life.</span></p>
+		<p style="margin:0pt 0pt 0pt 0pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ">- For some seniors, safety may be a concern in their own
+				homes due to mobility issues or other factors. Elderly homes are designed to provide a safe and
+				secure living environment, with features such as grab bars and emergency call systems to ensure that
+				residents can get help quickly if needed.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">If you are looking for one, please refer to
+			</span><span style="font-family:Calibri;  ">the this</span><span
+				style="font-family:Calibri;  "> list of </span><span
+				style = "font-family: Calibri"></span><a href = "https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_listofresi/">residential care homes</a>
+			</span><span style="font-family:Calibri;  ">complied by Social welfare department.
+			</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">
+		</p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p id="Publicrentalhousing" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">Public rental housing priority
+				scheme</span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Prefer to have a place on your own? </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">In order to</span><span
+				style="font-family:Calibri;  "> cater for the living for the elderly population and
+				make priority for them to secure a place to live, the government has launched the following priority
+				housing schemes. </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Single Elderly Persons Priority Scheme</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Elderly Persons Priority Scheme</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Harmonious Families Priority Scheme</span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Under these schemes, applicants must fulfill the
+				general eligibility criteria of the application for public rental housing (PRH). 
+				<br>
+				<br>
+				Applications will
+				generally be processed earlier than applications by ordinary families. For income and assets limit
+				for PRH eligibility, click </span><span
+				style="font-family:Calibri;  ;  "><a href="https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/index.html">here.</a></span></p>
+		
+				<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span style="font-family:Calibri;">For further information on PRH, click <a href="https://www.housingauthority.gov.hk/en/common/pdf/global-elements/forms/flat-application/HD273.pdf">here.</a></span></p>
+				
+		<p style="font-family:Calibri;  ">Single Elderly Persons Priority Scheme</span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">The applicant must be 58 years of age or </span><span
+				style="font-family:Calibri;  ">above, and</span><span
+				style="font-family:Calibri;  "> must have reached the age of 60 by the time of flat
+				allocation.  </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Elderly Persons Priority Scheme</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Two or more elderly persons aged 58 or above
+				(including non-related persons) who agree to live together in the same Public Rental Housing (PRH)
+				unit are eligible to apply. </span></p><br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Harmonious Families Priority Scheme</span></p>
+				
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">This scheme is launched to encourage younger families
+				to take care of older parents or relatives and promote family harmony. This scheme provides priority
+				allocation opportunities for public housing applicants with elderly families. Eligible families can
+				choose to live in one flat or live in two nearby flats, depending on the choice of district and the
+				number of flats suitable for the family.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+
+		<p style="margin:0pt"><br style="page-break-before:always; clear:both" /></p>
+		<p id="Assistanceforstayhome" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">Assistance for stay home elderly
+			</span><span style="font-family:Calibri;  ; font-weight:bold">individuals</span></p>
+			
+			<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For elderly individuals who wish to remain in their
+				own homes or whose preferred elderly home is not yet available, there are a variety of options that
+				can help alleviate the burden of those who take care of them and upkeep the life satisfaction of the
+				elderly people. </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(a) Go to day care </span><span
+				style="font-family:Calibri;  ; font-style:italic">centre</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Social Welfare department provides a comprehensive
+				list of </span><span
+				style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_daycarecen/">governement subsidy </a></span><span
+				style="font-family:Calibri;  ;  ">or non-subvented</span><span
+				style="font-family:Calibri;  ;  "> day care service centers
+			</span><span style="font-family:Calibri;  ">of different districts. Several </span><span
+				style="font-family:Calibri;  ">centres</span><span
+				style="font-family:Calibri;  "> also provide bus shuttle service for transport to
+			</span><span style="font-family:Calibri;  ">centres</span><span
+				style="font-family:Calibri;  ">. </span></p>
+		
+		</p>
+	
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(b) </span><span
+				style="font-family:Calibri;  ; font-style:italic">Enhaned</span><span
+				style="font-family:Calibri;  ; font-style:italic"> home and community care services
+			</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Elderly </span><span
+				style="font-family:Calibri;  ">indiviuals</span><span
+				style="font-family:Calibri;  "> could employ helper to </span><span
+				style="font-family:Calibri;  ">provide assistance</span><span
+				style="font-family:Calibri;  "> with daily tasks and household chores. It could
+				provide a valuable source of assistance and support for those who need ongoing care, allowing them
+				to maintain their independence and stay in their own homes for as long as possible. </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For those frail persons aged 60 or above and who are
+				assessed and recommended for Community Care Services or Residential Care Services under the
+			</span><span style="font-family:Calibri;  ">Standardised</span><span
+				style="font-family:Calibri;  "> Care Need Assessment Mechanism for Elderly Services,
+				Social welfare department has launched the "enhanced home and community care services" aiming to
+				maximize the level of functioning of the elderly individuals and provide support </span><span
+				style="font-family:Calibri;  ">in order to</span><span
+				style="font-family:Calibri;  "> strengthen family cohesion.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For further information and application, please refer
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_enhancedho/">here.</a></span><span</p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(C) Residential respite
+				service</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">In some cases, those who take care of the elderly
+				people might need to take a break due to various reasons. Residential respite service is a type of short-term care for elderly individuals who
+				require some level of personal assistance and reside in the community. The primary aim of these services is to offer temporary relief to family members or
+				caregivers who are responsible for their care. The services are typically provided in a residential
+				setting, such as a nursing home or assisted living facility, and can range from a few days to
+				several weeks. The main objective of residential respite services is to
+				provide high-quality care and support to seniors while also giving their caregivers a much-needed break. For further information, please refer
+				
+				<a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_respiteser/">here.</a>
+				</span>
+		</p>
+
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			<br>
+			<span
+				style="font-family:Calibri;  ">Application Procedure</span><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p id="Residentialcareservice" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Referrals for admission to residential respite service
+				should be made by a social worker.</span><span
+				style="font-family:Calibri;  ">&#xa0;</span><span
+				style="font-family:Calibri;  "> Elderly persons or their families may approach
+				casework service units who will assess the elder's</span><span
+				style="font-family:Calibri;  ">&#xa0;</span><span
+				style="font-family:Calibri;  ">needs</span><span
+				style="font-family:Calibri;  ">&#xa0;</span><span
+				style="font-family:Calibri;  ">and make referrals to the residential care homes for
+				the elderly </span><span style="font-family:Calibri;  ">indvidiuals</span><span
+				style="font-family:Calibri;  "> or nursing homes concerned if considered suitable.
+			</span></p>
+			<br>
+			<p style="font-size: smaller;margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">Examples of casework service
+				units</span><span style="font-family:Calibri;  ; font-style:italic">- 
+				Integrated</span><span style="font-family:Calibri;  ; font-style:italic"> Family
+				Service </span><span
+				style="font-family:Calibri;  ; font-style:italic">Centres</span><span
+				style="font-family:Calibri;  ; font-style:italic">, Medical Social Services Units,
+				District Elderly Community </span><span
+				style="font-family:Calibri;  ; font-style:italic">Centres</span><span
+				style="font-family:Calibri;  ; font-style:italic">, </span><span
+				style="font-family:Calibri;  ; font-style:italic">Neighbourhood</span><span
+				style="font-family:Calibri;  ; font-style:italic"> Elderly </span><span
+				style="font-family:Calibri;  ; font-style:italic">Centres</span><span
+				style="font-family:Calibri;  ; font-style:italic">, Social </span><span
+				style="font-family:Calibri;  ; font-style:italic">Centres</span><span
+				style="font-family:Calibri;  ; font-style:italic"> for the Elderly, Day Care
+			</span><span style="font-family:Calibri;  ; font-style:italic">Centres</span><span
+				style="font-family:Calibri;  ; font-style:italic">/Units for the Elderly, Enhanced
+				Home and Community Care Services Teams, Integrated Home Care Services Teams and Home Help
+				Team.</span></p>
+				<br>
+				<br>
+				<span style="font-family:Calibri;  ; font-weight:bold">Residential Care Service Voucher Scheme</span><span style="font-family:Calibri;  "> </span>
+				<br>
+				<span style="font-family:Calibri;">In order to support elderly individuals who prefer to stay in their homes, and to tackle the high demand of elderly homes, the government has launched the Residential Care Service Voucher Scheme. Under this scheme, it enables elderly persons to choose community care services or at the comfort of their homes that suit their individual needs to support their ageing in place. Elderly individuals could use change to use services in another </span><span style="font-family:Calibri;  ">centre</span><span style="font-family:Calibri;"> later one, as such this scheme is called the "money-following-the-user scheme".</span>
+			</p>
+				<br>
+				<span style="font-family:Calibri;  ">Eligibility </span>
+			<p style="margin:0pt; orphans:0; text-align:justify; widows:0;">
+				<span style="font-family:Calibri;  ">All elderly persons who have been assessed and recommended for Residential Care Services under Social Welfare Department's Standardized Care Need Assessment Mechanism for Elderly Services and are waitlisted for Care Attention Homes for Elderly.</span>
+			</p>
+	
+			</p>
+			<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For further information and application, please refer
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_psrcsv/">here.</a></span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span</p>
+			
+		<br>
+		<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p id="Centralizedwaitlistfor" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold"> Centralized waiting list for
+				subsidized long-term care service </span><span
+				style="font-family:Calibri;  ;  ">  </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Applying for different types of elderly care services
+				can often involve a significant amount of paperwork, which can be </span><span
+				style="font-family:Calibri;  ">daunting</span><span
+				style="font-family:Calibri;  ;  "> </span><span
+				style="font-family:Calibri;  "> for</span><span
+				style="font-family:Calibri;  "> seniors and their caregivers. However, there is an
+				option for those who do not have a particular preference for the type </span><span
+				style="font-family:Calibri;  ">of</span><span
+				style="font-family:Calibri;  ;  "> </span><span
+				style="font-family:Calibri;  "> care</span><span
+				style="font-family:Calibri;  "> they receive. By applying for the centralized waiting
+				list for subsidized long-term care services, seniors can </span><span
+				style="font-family:Calibri;  ">potentially</span><span
+				style="font-family:Calibri;  ;  "> </span><span
+				style="font-family:Calibri;  "> receive</span><span
+				style="font-family:Calibri;  "> the care they need earlier and alleviate the burden
+				on their caregivers. This centralized waiting list system helps </span><span
+				style="font-family:Calibri;  ">to</span><span
+				style="font-family:Calibri;  ;  "> </span><span
+				style="font-family:Calibri;  "> streamline</span><span
+				style="font-family:Calibri;  "> the application process for seniors seeking long-term
+				care services, making it easier for them to access the care they</span><span
+				style="font-family:Calibri;  ;  "> </span><span
+				style="font-family:Calibri;  "> need in a timely manner.</span><span
+				style="font-family:Calibri;  ;  ">   </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For further information and application, please refer
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_centralwai/">here.</a></span><span
+				style="font-family:Calibri;  ;  "> </span></p>
+	
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+	
+				<div style="float:right;width: 100px;margin-right: 100px;" ><img style="width: 120px; " src="16maintenace cost.jpg"/></div>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span>
+				</p>
+		<p id="Buildingmaintenance" style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			
+			<span 
+				style="font-family:Calibri;  ; font-weight:bold">Building Maintenance Subsidy Scheme for Needy Owners</span></p>
+				
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Building maintenance amount could be very heavy,
+				especially for elderly people living with low income. The scheme provides financial assistance to needy
+				owner-occupiers to subsidize the maintenance costs of their own buildings and improve the condition of buildings in disrepair and
+				enhance the safety of their residences. </span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">Each subsidy application is capped at HK$80,000. Each
+				eligible applicant and his or her legal spouse </span><span
+				style="font-family:Calibri;  ">(if married) can be </span><span
+				style="font-family:Calibri;  ">granted an allowance of up to HK$80,000 in total.</span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">For application methods or more information, please
+				visit </span><span
+				style="font-family:Calibri;  ;  "><a href="https://brplatform.org.hk/en/subsidy-and-assistance/integrated-building-rehabilitation-assistance-scheme/schemes-for-individual-owners/building-maintenance-grant-scheme">here.</a></span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+
+				<br>
+
+				<div style="display: flex; justify-content: flex-end;">
+					<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+						<img style="width: 180px;" src="9Whatsapp.png" alt="WhatsApp">
+					</a>
+				</div>
+				<br>
+				<br>
+	
+	
+	</div>
+	
+			
+			
+	
+	
+	<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+	<a href="Privacy.html">Privacy policy</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer.html">Disclaimer</a>
+	</div>
+	</div> 
+			
+	</body>
+	</html>
+	

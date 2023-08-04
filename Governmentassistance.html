@@ -1,0 +1,742 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color:#a4ddb4;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+ 
+		  table {
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			margin: 0 auto;
+			}
+
+			tr {
+			display: flex;
+			justify-content: center;
+			}
+
+			td {
+			width: auto;
+			height: 300px; /* Increase the height to make the table bigger */
+			background-color: rgb(255, 255, 255);
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+			margin: 10px; /* Add margin to create some separation between cells */
+			}
+
+			td.a {
+			background-position: 0 0;
+			}
+
+			td.b {
+			background-position: -8.8667em 0;
+			}
+
+			td.c {
+			background-position: -17.7333em 0;
+			}
+
+			td.a1 {
+			background-position: 0 -8.8667em;
+			}
+
+			td.b1 {
+			background-position: -8.8667em -8.8667em;
+			}
+
+			td.c1 {
+			background-position: -17.7333em -8.8667em;
+			}
+
+			td.a2 {
+			background-position: 0 -17.7333em;
+			}
+
+			td.b2 {
+			background-position: -8.8667em -17.7333em;
+			}
+
+			td.c2 {
+			background-position: -17.7333em -17.7333em;
+			}
+			td img {
+			height: 120%; /* Set the height to 100% to fill the cell */
+			width: 120%; /* Set the width to 100% to fill the cell */
+			object-fit: cover; /* Use object-fit to ensure the image fills the cell without distortion */
+			}
+			/* td img {
+			height: 233px;
+			margin: 0 auto 10px;
+			vertical-align: middle;
+			} */
+
+			a {
+			text-decoration: none;
+			}
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Governmentassistance1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Governmentassistance.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+  <img class="image" src="2banner.png"style="vertical-align: top;">
+	<div class="menu">
+		<div class="menu-item">
+		<a href="abouts.html">About Us</a>
+		</div>
+		<div class="menu-item">
+		<a href="Governmentassistance.html">Government Assistance</a>
+		</div>
+		<div class="menu-item">
+		<a href="Accommodation.html">Accommodation </a>
+		</div> 
+		<div class="menu-item">
+		<a href="FoodDriveandItemsGiveaway.html">Food & Items Giveaway </a>
+		</div>
+		<div class="menu-item">
+		<a href="Employment.html">Employment</a>
+		</div>
+		<div class="menu-item">
+		<a href="GoldenAgeConnec.html">GoldenAgeConnect</a>
+		</div>
+		<div class="menu-item">
+		<a href="Howtohelp.html">How to Help  </a>
+		</div>
+		<!-- <div class="underline"></div> -->
+		
+	</div>
+  </div>
+
+  
+  <div style="margin-left: 20%; margin-right: 20%;">
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">&#xa0;</span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ; font-weight:bold">Government Assistance </span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">&#xa0;</span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">The HKSAR government recognizes the importance of
+	  		supporting elderly population and has implemented various programs and services in the following
+	  		areas:  </span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ;  "><a href="#Medical">Medical</a> </span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ;  "><a href="#Transport">Transport</a></span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ;  "><a href="#Allowance">Allowance</a></span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ;  "><a href="#Communityservices">Community services</a></span>
+	  </p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">&#xa0;</span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">&#xa0;</span></p>
+	  <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+	  		style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p id="Medical" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">Medical</span>
+			
+			</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  font-weight:bold">Health Care Voucher</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+		
+		<br>
+		
+		<span
+			style="font-family:Calibri;  ">Above 65 years old elderly people can pay the
+			consultation, </span><span style="font-family:Calibri;  ">treatment</span><span
+			style="font-family:Calibri;  "> and medicine fee by healthcare voucher for the
+			following services: </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Medical practitioners</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Chinese medicine practitioners</span></p>
+			<div style="float: right;width: 300px;" ><img style="width:200px" src="11HealthCarevoucher.png"/></div>
+			
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Dentists</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Chiropractors</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Registered nurses and enrolled nurses</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Physiotherapists</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Occupational therapists</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Radiographers</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Medical laboratory technologists</span></p>
+	
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0;">
+		<span
+			style="font-family:Calibri;" >Optometrists</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0;"><span
+			style="font-family:Calibri;" >Preventive care, curative, or rehabilitative
+			services</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Accident &amp; Emergency (A&amp;E) services provided
+			by private hospitals if the A&amp;E services belong to </span><span
+			style="font-family:Calibri;  ">out-patient</span><span
+			style="font-family:Calibri;  "> services</span></p>
+			</br>
+			<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+				<span
+			
+			style="font-family:Calibri;  ">At present, the annual voucher amount for each
+			eligible elderly person is $2,000 while the accumulation limit of vouchers is $8,000. Elderly
+			persons are provided with their annual </span><span
+			style="font-family:Calibri;  ">amount</span><span
+			style="font-family:Calibri;  "> of vouchers that will be automatically deposited in
+			their voucher account on 1 January from the year in which they become eligible under the Elderly
+			Health Care Voucher Scheme.</span><br /><span
+			style="font-family:Calibri;  ">Eligible elders can make appointment for our services
+			and present a valid HK Identity Card for registration and sign the consent form for the voucher
+			amount to be deducted to pay the medical fees.</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+		<br />
+		<span
+			style="font-family:Calibri;  ">For further information, please refer </span><span
+			style="font-family:Calibri;  ;  "><a href="https://www.hcv.gov.hk/en/hcvs/service_area.html">here.</a></span><span
+			style="font-family:Calibri;  ;  "> </span></p>
+	<br />
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-style:italic">Note: To avoiding double
+			subsidizing, the vouchers cannot be used for public services or those directly subsidized by the
+			Government.</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+		style="font-family:Calibri;font-weight:bold"  ; >Colorectal Cancer Screening</a></span></p>
+		
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Since colorectal cancer is the second commonest cancer
+			in Hong Kong, HKSAR government subsidizes asymptomatic Hong Kong residents aged 50 to 75 to receive
+			screening services in the private sector to prevent colorectal cancer. Participants will first
+			undergo a fecal occult blood test to detect trace amounts of blood that are invisible to the naked
+			eye. If there is, we will arrange to undergo colonoscopy and remove possible large bowel polyps to
+			prevent them from developing into cancer.</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ;  "></span>
+	</p>
+	</span>
+	<br>
+	<br>
+	<br>
+	<span
+			style="font-family:Calibri;font-weight:bold"  ; >Counselling/ clinical
+			psychological service</a></span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			<div style="float:right;width: 300px;">
+			<a href="https://www.shallwetalk.hk/en"><img src="12shallweTalk.png" style="width: 200px; margin-left: 10px;"></a>
+		  </div>
+			<span style="font-family:Calibri;  ">&#xa0;</span><span
+			style="font-family:Calibri;  ">"Shall We Talk" is a mental health promotion and public education
+			initiative launched by the Advisory Committee on Mental Health since July</span><span
+			style="font-family:Calibri;  ">&#xa0;</span><span
+			style="font-family:Calibri;  ">2020. It is launched to increase public engagement in
+			promoting mental well-being and to enhance public knowledge about mental health with a view to
+			encouraging help-seeking and early intervention. </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><a style="color:#0563c1"
+			href="https://www.shallwetalk.hk/en/"><span
+				style="color:#0563c1; font-family:Calibri;  ;  "></span></a>
+	</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span>
+			<!-- \<img src="12shallweTalk.png" style="width: 200px; margin-left: 10px;"></a> -->
+			<div style="float:right;width: 400px;" ><img style="width:200px; margin-left: 50px; margin-bottom:10px" src="14senior citizen card.jpg"/></div>
+			</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+			
+	<p id="Transport" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">Transport</span>
+			
+			</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Application for </span><span
+			style="font-family:Calibri;  ">JoyYou</span><span
+			style="font-family:Calibri;  "> Card opens for eligible persons aged </span><span
+			style="font-family:Calibri;  ">60</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">JoyYou</span><span
+			style="font-family:Calibri;  "> Card holders can travel on designated public
+			transport modes and services at a concessionary fare of $2 per trip. For details on the transport
+			benefited, please visit </span><span
+			style="font-family:Calibri;  ;  "><a href="https://www.lwb.gov.hk/en/highlights/fare_concession/index.html">here.</a></span><span
+			style="font-family:Calibri;  "> 
+			 
+			 </span>
+	</p>
+	<br>
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Eligibility</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Eligible applicants must be Hong Kong Smart Identity
+			Card holders who are aged 60 or </span><span style="font-family:Calibri;  ">above,
+			or</span><span style="font-family:Calibri;  "> will reach the age of 60 within 3
+			months from the date of application. </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Apply through this </span><span
+			style="font-family:Calibri;  ;  "><a href="https://www.octopus.com.hk/en/consumer/octopus-cards/products/on-loan/joyyou.html">link.</a></span></p>
+
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p id="Allowance" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">Allowance</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">HKSAR government recognizes the need of supporting the
+			elderly population given the high cost of living in Hong Kong and several allowance schemes have
+			been launched. </span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">(a) Comprehensive Social Security Assistance Scheme
+			(CSSA)</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">CSSA provides income assistance to those whose
+			economic income is insufficient to meet their basic needs, </span><span
+			style="font-family:Calibri;  ">so as to</span><span
+			style="font-family:Calibri;  "> ensure their standard of living. When applying for
+			CSSA, the assets and income of the applicant and his/her family members must be lower than the limit
+			of the CSSA scheme </span><span style="font-family:Calibri;  ">in order
+			to</span><span style="font-family:Calibri;  "> pass the assets test and income test.
+			If applicants need continuous care or nursing home funding, they need to meet the specified health
+			conditions before they can pass the physical assessment and be graded according to the approval
+			results.</span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Funding:</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The amount of CSSA subsidy and nursing home CSSA
+			ranges from $4,060 to $11,070 per month, and additional special allowances are provided according to
+			the needs of CSSA elders.</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">A person can make an application directly to
+			a</span><span style="font-family:Calibri;  ">&#xa0;</span><a style="color:#0563c1"
+			href="https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_addressesa/"><span
+				style="color:#0563c1; font-family:Calibri;  ;  ">social
+				security field unit</span></a><span
+			style="font-family:Calibri;  ">&#xa0;</span><span
+			style="font-family:Calibri;  ">near to his/her place of residence</span><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+<!-- 	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ;  ">https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_addressesa</span>
+	</p> -->
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">(b) Old Age Allowance</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Old age allowance provides cash allowances to eligible
+			elderly persons to meet their special needs arising from old age, regardless their capital on hand.
+			Amount of assistance payable per month of Old Age Allowance is HK$1,570 (from 1 February 2023
+			onwards) </span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Eligibility:  </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">You must have been a Hong Kong resident for at least
+			seven </span><span style="font-family:Calibri;  ">years;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">You must be at least 70 years </span><span
+			style="font-family:Calibri;  ">old;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">You must have</span><span
+			style="font-family:Calibri;  ">&#xa0;</span><span
+			style="font-family:Calibri;  ">continuously</span><span
+			style="font-family:Calibri;  ">&#xa0;</span><span
+			style="font-family:Calibri;  ">resided in Hong Kong for at least one year before the
+			date of application (means not having resided outside Hong Kong for more than 56 days during that
+			one-year period</span><span style="font-family:Calibri;  ">);</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">You must continue to reside in Hong Kong during
+			receipt of Old Age Allowance; and</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">You are not receiving any other allowances under the
+			Social Security Allowance Scheme or Comprehensive Social Security Assistance (CSSA).</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">How to apply?</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">- Apply to a social security field unit or ask a
+			friend/relative to do so for you. This may be done in person, or by phone, fax, email or
+		</span><span style="font-family:Calibri;  ">post;</span><span
+			style="font-family:Calibri;  ">  </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">- Refer to the Social Welfare Department by another
+			government department or non-governmental </span><span
+			style="font-family:Calibri;  ">organization;</span><span
+			style="font-family:Calibri;  "> </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">- Complete the 'Social Security Allowance Scheme
+			Application Form' to a social security field unit.  </span><br /><span
+			style="font-family:Calibri;  ">For further information and application form, please
+			check </span><span
+			style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_ssallowance/">here.</a></span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><a style="color:#0563c1"
+			href="https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_ssallowance/"></a>
+	</p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">(C) Old Age Living Allowance </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Old age living allowance scheme was launched by Social
+			Welfare department to help the needy if the applicant’s income and assets do not exceed certain
+			limit (click </span><span
+			style="font-family:Calibri;  ;  "><a href = "https://www.swd.gov.hk/oala/index_e.html#s4"></a> here</span><span
+			style="font-family:Calibri;  ">to check the limit).</span></p>
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The range of subsidy starts from $4,060 (start from 1
+			February 2023) </span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Eligibility: </span><span
+			style="font-family:Calibri;  ; font-weight:bold"> </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The applicant must be 65 or </span><span
+			style="font-family:Calibri;  ">older;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The applicant must have been a Hong Kong resident for
+			at least seven years and have resided in Hong Kong continuously for at least one year immediately
+			before the date of application (absence from Hong Kong up to a maximum of 56 days during the
+			one-year period is treated as residence in Hong Kong</span><span
+			style="font-family:Calibri;  ">);</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The applicant must not be receiving Old Age Allowance
+			(OAA) or Disability Allowance (DA) under the Social Security Allowance Scheme or assistance under
+			the Comprehensive Social Security Assistance </span><span
+			style="font-family:Calibri;  ">Scheme;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">The applicant must continue to reside in Hong Kong
+			during receipt of </span><span style="font-family:Calibri;  ">OALA</span><span
+			style="font-family:Calibri;  "> </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">(d) Senior Citizen Card Scheme </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+		<div style="float:right;width: 400px;" ><img src="13JoyYau card.jpg"/></div>
+		<span
+			style="font-family:Calibri;  ">The Senior Citizen Card is for people 65 or older and
+			is associated with social benefits such as concessions, discounts and priority services offered by a
+			wide range of institutions and organizations.</span></p>
+			
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">For more information or how to apply, please refer
+		</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_seniorciti">here.</a></span><span
+			style="font-family:Calibri;  ">  </span></p>
+			
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ;  "></span>
+	</p>
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p id="Communityservices" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">Community services </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">District elderly community center</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">It is good for elderly people to join the elderly
+			community center as it provides many services and facilities that would be beneficial to the
+			physical and mental aspects of the elderly people. Services include community education, case
+			management, support teams for the elderly, health education, developmental activities, career
+			support services, social and recreational activities, </span><span
+			style="font-family:Calibri;  ">canteen</span><span
+			style="font-family:Calibri;  "> and meal services as well as drop-in and consultation
+			services.</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">HKSAR government has set up community centers among
+			different districts of Hong Kong and you </span><span
+			style="font-family:Calibri;  ">may find a suitable and convenient </span><span
+			style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_districtel">center location</a>. </span>
+	</p>
+
+	<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Community Recreation &amp; Sports Program</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">Keeping mentally and physical active is crucial in
+			keeping a healthy lifestyle for elderly people. The government has many </span><span
+			style="font-family:Calibri;  ">facitilies</span><span
+			style="font-family:Calibri;  "> and services at affordable cost. For instance, you
+			may rent a table tennis court to play with your </span><span
+			style="font-family:Calibri;  ">friends, or</span><span
+			style="font-family:Calibri;  "> join the swimming course for elderly people to
+			strengthen your body. Please click this </span>
+			<span
+			style="font-family:Calibri;  ;  "><a href="https://www.lcsd.gov.hk/clpss/en/search/leisure/srchCommRecretSprtProgsForm.do?searchFormPath=search%2Fleisure%2FsrchCommRecretSprtProgsForm&amp;dist=ALL&amp;enrolStat=ALL&amp;enrolMeth=ALL&amp;actType=ALL&amp;targetType=ALL&amp;age=ALL&amp;month=101&amp;week=ALL&amp;enrolDate=&amp;DateType=Enrolment%20Date&amp;sortField=&amp;sortOrder=&amp;search=&amp;pageNo=1&amp;sortField1=&amp;sortField2=&amp;sortField3=&amp;sortField4=&amp;hasSort=yes&amp;sub_month=4-5">link</a></span><span
+			style="font-family:Calibri;  "> to find something you are interested in. Enjoy!
+		</span></p>
+
+
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+			<br>
+		
+			<div style="display: flex; justify-content: flex-end;">
+				<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+					<img style="width: 180px;" src="9Whatsapp.png" alt="WhatsApp">
+				</a>
+			</div>
+			<br>
+			<br>
+
+
+</div>
+
+		
+		
+
+
+<div class="menu2">
+<div style="width: 70%; padding: 10px;font-size:20px;">
+<a href="Privacy.html">Privacy policy</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer.html">Disclaimer</a>
+</div>
+</div> 
+		
+</body>
+</html>

@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; 
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+			a {
+			text-decoration: none;
+			}
+	
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+</script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Governmentassistance1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Governmentassistance.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 20%; margin-right: 20%;">
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ; font-weight:bold">政府援助 </span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">香港特別行政區政府認識到支持老年人口的重要性，並在以下方面實施了多項計劃和服務：
+            </span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ;  "><a href="#Medical">醫療</a> </span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ;  "><a href="#Transport">運輸</a></span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ;  "><a href="#Allowance">津貼</a></span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ;  "><a href="#Communityservices">社區服務</a></span>
+        </p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p id="Medical" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ; font-weight:bold">醫療</span>
+              
+              </p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  font-weight:bold">醫療券</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+          
+          <br>
+          
+          <span
+              style="font-family:Calibri;  ">65歲以上長者可憑醫療券支付以下服務的診療費和藥費：</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">執業醫師</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">中醫師</span></p>
+              <div style="float: right;width: 300px;" ><img style="width:200px" src="11HealthCarevoucher.png"/></div>
+              
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">牙醫</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">脊椎按摩師</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">註冊護士和註冊護士</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">物理治療師 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">職業理療師 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">放射技師</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">醫學化驗師</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+          
+        
+          <span
+              style="font-family:Calibri;" >驗光師</p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0;"><span
+              style="font-family:Calibri;" >預防保健、治療或康復服務 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">私立醫院提供的急症室服務 (若急症室服務屬於門診服務 )</span></p>
+              </br>
+              <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+                  <span
+              
+              style="font-family:Calibri;  ">現時每名合資格長者每年可獲發的醫療券金額為2,000元，而醫療券累積上限為8,000元。年長者會獲得每年的醫療券金額，這些醫療券會在他們符合長者醫療券計劃資格的那一年起的 1 月 1 日自動存入他們的醫療券賬戶。</span></p>
+          <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+          <br />
+          <span
+              style="font-family:Calibri;  ">欲了解更多信息，請參閱         </span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.hcv.gov.hk/en/hcvs/service_area.html">此處</a></span><span
+              style="font-family:Calibri;  ;  ">。</span></p>
+      <br />
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ; font-style:italic">注意：為避免雙重補貼，優惠券不能用於公共服務或政府直接補貼的服務。
+        </span></p>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+          style="font-family:Calibri;font-weight:bold"  ; >結直腸癌篩查 </a></span></p>
+          
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">由於大腸癌是香港第二常見的癌症，特區政府資助50至75歲無病徵的香港居民到私營機構接受篩查服務，以預防大腸癌。參與者將首先接受糞便潛血測試，以檢測肉眼看不見的微量血液。如果有，我們會安排做結腸鏡檢查，並切除可能的大腸息肉，以防止它們發展成癌症</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ;  "></span>
+      </p>
+      </span>
+      <br>
+      <br>
+      <br>
+      <span
+              style="font-family:Calibri;font-weight:bold"  ; >諮詢/臨床心理服務 
+        </a></span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+              <div style="float:right;width: 300px;">
+              <a href="https://www.shallwetalk.hk/en"><img src="12shallweTalk.png" style="width: 200px; margin-left: 10px;"></a>
+            </div>
+              <span style="font-family:Calibri;  ">&#xa0;</span><span
+              style="font-family:Calibri;  ">"“陪我講” 是心理健康諮詢委員會於2020年7月推出的一項心理健康推廣及公眾教育活動，旨在加強公眾對促進心理健康的參與，以及提高公眾對心理健康的認識，以求鼓勵有需要人仕尋求幫助和作出早期干預。
+        </span></p>
+             
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><a style="color:#0563c1"
+              href="https://www.shallwetalk.hk/en/"><span
+                  style="color:#0563c1; font-family:Calibri;  ;  "></span></a>
+      </p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span>
+
+              <div style="float:right;width: 400px;" ><img style="width:200px; margin-left: 50px; margin-bottom:10px" src="14senior citizen card.jpg"/></div>
+              </p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+              
+      <p id="Transport" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ; font-weight:bold">運輸</span>
+              
+              </p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">60歲合資格人士可申請樂悠咭
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  "> 樂悠咭持有人可以每次2元的優惠票價乘坐指定的公共交通工具。有關受惠交通詳情，請瀏覽   </span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.lwb.gov.hk/en/highlights/fare_concession/index.html"></a></span><span
+              style="font-family:Calibri;  "> 
+               
+               </span>
+      </p>
+      <br>
+      
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">申請資格 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">合資格申請人必須為60歲或以上的香港智能身份證持有人，或將於申請日期起計3個月內年滿60歲。</span><span style="font-family:Calibri;  ">
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">通過此鏈接申請</span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.octopus.com.hk/en/consumer/octopus-cards/products/on-loan/joyyou.html">此鏈接</a></span><span
+                style="font-family:Calibri;  ">申請。</span></p>
+        <br>
+     <br>
+     <br>
+     <br>
+
+    
+      <p id="Allowance" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ; font-weight:bold">高齡津貼 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">鑑於香港的高昂的生活成本，香港特區政府意識到支持長者人口的需要，並推出了多項津貼計劃。 
+        </span></p>
+              <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">(a) 綜合社會保障援助計劃（綜援） 
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">綜援為經濟收入不足以應付基本需要的人士提供收入援助，以確保他們的生活水平。申請綜援時，申請人及其家庭成員的資產和入息必須低於綜援計劃的限額，才能通過資產審查和入息審查。申請人如需持續護理或獲療養院資助，需符合規定的健康狀況，方可通過體檢，並根據審批結果進行分級。 
+        </span></p>
+              <br>
+
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">資助金額： 綜援津貼及護老院綜援金額每月介乎$4,060元至$11,070元，並按綜援長者的需要額外提供特別津貼。 
+        </span></p>
+      
+
+
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+        style="font-family:Calibri;  ">長者可以直接向他/她居住地附近的</span><span 
+        style="font-family:Calibri;  ">&#xa0;</span><a
+        href="https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_addressesa/"><span
+        style="color:#0563c1; font-family:Calibri;  ;  ">社會保障現場單位</span></a><span
+        style="font-family:Calibri;  ">&#xa0;</span><span
+        style="font-family:Calibri;  ">提出申請。</span><span
+        style="font-family:Calibri;  ">&#xa0;</span></p>
+
+
+
+
+        <br>
+        <br>
+        <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">(b) 高齡津貼 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">不論長者手頭有多少資金, 高齡津貼為合資格長者提供現金津貼，以應付他們因年老而產生的特殊需要。每月高齡津貼的援助金額為 $1,570元（由2023年2月1日起）。 
+        </span></p>
+              <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">申請資格:  </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在香港住滿七年;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">年滿70歲; </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在申請日期前連續居住在香港至少一年（指在該一年期間沒有在香港以外居住超過 56 天）； 
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在領取高齡津貼期間必須繼續居住在香港; 
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">沒有領取社會保障津貼計劃或綜合社會保障援助（綜援）下的任何其他津貼
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">申請方法 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">- 向社會保障辦事處申請或請朋友/親戚為您申請
+     </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">- 可以親自進行，也可以通過電話、傳真、電子郵件或郵寄方式進行
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">- 保障辦事處填寫“社會保障津貼計劃申請表”
+              
+        </span><br /><span
+              style="font-family:Calibri;  ">如需更多訊息和申請表，請查看
+        </span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_socsecu/sub_ssallowance/">此處。</a></span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">(C) 長者生活津貼
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">長者生活津貼計劃由社會福利署推出，旨在幫助申請人的入息和資產不超過一定限額的有需要人士()
+        </span><span
+        style="font-family:Calibri;  ;  "><a href = "https://www.swd.gov.hk/oala/index_e.html#s4"></a> 按此</span><span
+              style="font-family:Calibri;  ">查看限額）。</span></p>
+     
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">T資助金額由$4,060起（由2023年2月1日起）</span></p>
+              <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">申請資格： </span><span
+              style="font-family:Calibri;  ; font-weight:bold"> </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在香港住滿七年; </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在申請日期前連續居住在香港至少一年（指在該一年期間沒有在香港以外居住超過 56 天）;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">在領取長者生活津貼期間必須繼續居住在香港; </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">申請人不得領取其他社會保障津貼計劃下的高齡津貼（OAA）,傷殘津貼（DA）或綜合社會保障援助計劃下的援助。
+      </span></p>
+      <br>
+      <br>
+      <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">(d) 長者咭計劃 </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+          <div style="float:right;width: 400px;" ><img src="13JoyYau card.jpg"/></div>
+          <span
+              style="font-family:Calibri;  ">長者咭適用於 65 歲或以上的人仕.持咭者可享有不同機構和組織提供的優惠、折扣和優先服務。 
+        </span></p>
+              
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">有關更多信息或如何申請，請參閱
+          </span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_seniorciti">此處。</a></span></p>
+              
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+      <p id="Communityservices" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ; font-weight:bold">社區服務</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">&#xa0;</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">地區長者社區中心</span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">對長者而言，加入長者社區中心是很好的，因為它提供許多有益身心的服務和設施。服務包括社區教育、個案管理、長者支援團隊、健康教育、發展活動、職業支援服務、社交和康樂活動、食堂和膳食服務, 到診和諮詢服務。
+        </span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">香港特區政府已在全港不同地區設立社區中心，你可以找到合適和方便的 </span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_districtel">中心位置。</a> </span>
+      </p>
+  
+      <br>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">社區康體活動/span></p>
+      <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+              style="font-family:Calibri;  ">保持身心活躍對於保持長者健康的生活方式至關重要。政府提供許多收費合理的設施和服務。長者可租個乒乓球場和朋友一起打球，或者參加老人游泳班強身健體。請單擊</span><span
+              style="font-family:Calibri;  ;  "><a href="https://www.lcsd.gov.hk/clpss/en/search/leisure/srchCommRecretSprtProgsForm.do?searchFormPath=search%2Fleisure%2FsrchCommRecretSprtProgsForm&amp;dist=ALL&amp;enrolStat=ALL&amp;enrolMeth=ALL&amp;actType=ALL&amp;targetType=ALL&amp;age=ALL&amp;month=101&amp;week=ALL&amp;enrolDate=&amp;DateType=Enrolment%20Date&amp;sortField=&amp;sortOrder=&amp;search=&amp;pageNo=1&amp;sortField1=&amp;sortField2=&amp;sortField3=&amp;sortField4=&amp;hasSort=yes&amp;sub_month=4-5">此鏈接</a></span><span
+              style="font-family:Calibri;  ">查找您感興趣的活動, 盡情享受吧！
+          </span></p>
+          <br>
+ 
+
+			<div style="display: flex; justify-content: flex-end;">
+				<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+					<img style="width: 180px;" src="9CWhatsapp.png" alt="WhatsApp">
+				</a>
+			</div>
+			<br>
+			<br>
+
+
+</div>
+
+<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+		<a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+		</div>
+	</div> 
+				
+</body>
+</html>

@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; 
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+          table {
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		margin: 0 auto;
+		}
+
+		tr {
+		display: flex;
+		justify-content: center;
+		}
+
+		td {
+		width: 200px;
+		height: 200px;
+		background-color: rgb(255, 255, 255);
+		padding: 0;
+		overflow: hidden;
+		text-align: center;
+		margin: 10px; /* Add margin to create some separation between cells */
+		}
+
+		td.a {
+		background-image: url('path/to/baptist.jpg');
+		background-position: center 10%; /* Move the image slightly lower */
+		}
+
+		td.b {
+		background-image: url('path/to/crossroad.jpg');
+		background-position: center -10%; /* Move the image slightly higher */
+		}
+
+		td.c {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.a1 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.b1 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.c1 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.a2 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.b2 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td.c2 {
+		background-image: url('path/to/image.jpg');
+		}
+
+		td img {
+		height: 100%; 
+		width: 100%; 
+		object-fit: contain; 
+		}
+
+	 
+
+			a {
+			text-decoration: none;
+			}
+	
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="GoldenAgeConnec1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="GoldenAgeConnec.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+    <br>
+
+     
+  <div style="margin-left: 20%; margin-right: 20%;">
+	
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">如何幫助？ </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">我們可以通過多種方式協助達成志願目標。我們可以在組織中做志願者，也可以向慈善機構捐贈金錢或物品來支持有需要的人。我們還可以大力倡導我們所關心的事業。 不要低估您付出的時間、金錢和精力。一點一滴的努力，都為老人創造更美好的生活品質！ 
+    </p>
+		
+				
+				<div style="display: flex; flex-direction: column; align-items: center;">
+				  <p><h2 style="align-items: center;">加入我們吧!</h2></p>
+				  <img style="width: 100%; height: auto; margin-top: 20px;" src="30joinus.png"/>
+				</div>
+				
+				<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;">&nbsp;</span></p>
+
+		
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">&#xa0;</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">志願服務 </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">我們目前正在尋找志願者協助我們維護網站，並為社區老年成員提供支持。由於許多年輕人忙於工作和其他責任，老年人常常未能尋獲適時的資訊來解決他們的疑問和擔憂。我們的志願者將協助回答有關瀏覽網站的問題、查找他們所需的率訊息以及為他們提供熱線電話或聯繫支授服務。 </p>
+	<br>
+
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">志願服務和捐贈 </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+	]
+		<span
+			style="font-family:Calibri;  ">有許多組織可以幫助支授老年人生活所需，並歡迎您捐贈的資金和物品。除了捐款之外，您還可以運用自己的時間和精力做志願者 。
+        </p>
+			
+			<br>
+	<table>
+				<tr>
+
+					
+					<td class="b">
+						<a href="https://helpinghand.org.hk/e/content/cont_page.asp?content_id=10207">
+							<div style="width: 10px;" ><img style="width: 150px;" src="25HelpingHandOrg.png"/></div>
+						</a>
+							
+					</td>
+					<td class="c">
+						<div>
+							<a href="https://www.oxfam.org.hk/en/what-we-do/development-programmes/hong-kong/povertyamongtheelderly">
+								<div style="width: 10px;" ><img style="width: 150px;" src="24OxfamHK.png"/></div>
+								
+							</a>
+						
+						</div>
+					</td>
+					<td class="a">
+						<div>
+							<a href="https://www.bokss.org.hk/volunteer?_lang=en">
+								<div style="width: 10px;" ><img style="width: 200px;" src="25baptist.png"/></div>
+							</a>
+						
+						</div>
+					</td>
+
+				</tr>
+				<tr>
+					<td class="a1">
+							<a href="https://www.foodangel.org.hk/index.php?l=tc">
+								<div style="width: 10px;" ><img style="width: 150px; float: left" src="17food_angel_logo_thumbnail.png"/></div>
+							</a>
+						</td>
+					<td class="b1">
+						<a href="http://www.emv.org.hk/volunteer.php">
+							<div style="width: 10px;" ><img style="width: 150px; float: left" src="26Engineering nurse.jpg"/></div>
+						</a>
+					<td class="c1">
+						<a href = "https://impacthk.org/whatwedo/our-outreach/">
+						<div style="width: 10px;" ><img style="width: 150px;" src="28impacthk-logo.png"/></div>
+					</a>
+						</td>
+					
+				</tr>
+			<tr>
+				<td class="a1">
+						<a href="https://feedinghk.org/">
+							<div style="width: 10px;" ><img style="width: 150px;" src="18Feeding-HK-logo.jpeg"/></div>
+						</a>
+					</td>
+				<td class="b1">
+						<div>
+							<a href="https://www.methodist-centre.com/main/tc/volunteer">
+								<div style="width: 10px;" ><img style="width: 200px;" src="27Methodist centre.png"/></div>
+							</a>
+							
+						</div>
+					</td>
+				<td class="c1">
+						<a href="https://www.crossroads.org.hk/">
+							<div style=" width: 10px;" ><img style="width: 150px;" src="21CrossRoad.jpg"/></div>
+						</a>
+				</td>
+				
+			</tr>
+			
+			</table>
+			
+	
+	<br>
+	<br>
+
+
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ; font-weight:bold">倡議志願目標</span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">改善香港長者的生活質素是一項至關重要的課題，需要社會各界的參與和支持。
+
+            個人可以通過多種方式參與並發揮作用，包括參與民意調查、通過論壇提供反饋、利用廣播機會以及向地區顧問和政府反映問題。 
+              </span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">民意調查是收集社區意見並為政策制定者提供寶貴意見的有效方法。通過參與這些民意調查，個人可以表達他們對影響香港老年人口的問題的擔憂和主張。 
+        </p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">論壇為個人提供了一個分享如何提高生活質量的想法和建議的平台。人們進行建設性對話，共同努力尋找解決老年人面臨挑戰的方案 </span></p>
+			<br>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">廣播機會可用於提高公眾對影響老年人口的問題的認識並進行教育。通過分享他們的經驗和見解，可以大眾幫助促進對老年人的理解和同理心。 
+        </span></p>
+	<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+			style="font-family:Calibri;  ">向地區輔導員和政府反映問題是倡導變革的重要方式。通過與這些官員聯繫，個人可以表達他們的擔憂並呼籲採取行動改善老年人的生活。 
+        </span></p>
+	<br>
+    <br>
+	
+	<br>
+	<br>
+	
+    <div style="display: flex; justify-content: flex-end;">
+        <a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+            <img style="width: 180px;" src="9CWhatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <br>
+    <br>
+    </div>
+
+
+<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+		<a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+		</div>
+	</div> 
+				
+</body>
+</html>

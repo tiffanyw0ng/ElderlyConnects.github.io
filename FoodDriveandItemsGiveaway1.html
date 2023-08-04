@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; 
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+			a {
+			text-decoration: none;
+			}
+	
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="FoodDriveandItemsGiveaway1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="FoodDriveandItemsGiveaway.html"style = "font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+
+
+    <div style="margin-left: 20%; margin-right: 20%;">
+        <br>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+            style="font-family:Calibri;  ; font-weight:bold">食物及物品捐助<span></p>
+        <br>
+        
+    
+            <span style="font-family:Calibri;">食物捐助<span>
+    
+    
+          <div style="float:right;width: 100px;margin-right: 150px;margin-top: 0px;"><img style="width:250px;" src="17food_angel_logo_thumbnail.png"/></div>
+          
+            <p style="margin:0pt; orphans:0; text-align:justify; widows:0;margin-top: 20px;">
+            <a href="https://www.foodangel.org.hk/" style="font-family:Calibri; font-weight:bold">
+                <span>惜食堂</span>
+            </a>
+            </p>
+                
+            <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+            style="font-family:Calibri;  ; font-style:italic">每週，惜食堂利用可食用的剩餘食物45噸，用於製作超過20,000份餐食。如需食品援助，請聯繫:</span>
+            </p>
+                
+            <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span style="font-family:Calibri;">深水埗長者食物援助: </span><span style="font-family:Calibri;">Whatsapp</span><span style="font-family:Calibri;"> 9404 1916</span><br/><span style="font-family:Calibri;">深水埗家庭食物援助: </span><span style="font-family:Calibri;">Whatsapp</span><span style="font-family:Calibri;"> 5481 9932</span><br/><span style="font-family:Calibri;">其他食品援助查詢: Tel 2801 5333</span></p>
+            
+        
+             
+    
+             <div style="float:right;width: 150px;margin-right: 100px;margin-top: 60px;"><img style="width:250px;" src="18Feeding-HK-logo.jpeg"/></div>
+          
+             <p style="margin:0pt; orphans:0; text-align:justify; widows:0;margin-top: 50px;">
+             <a href="https://feedinghk.org/host-a-food-drive" style="font-family:Calibri; font-weight:bold">
+                 <span>樂餉社</span>
+             </a>
+             </p>
+                 
+             <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+             style="font-family:Calibri;  ; font-style:italic">每天有超過 3,400 噸食物垃圾被填埋處理。與此同時，超過 100 萬人（佔香港人口的 14%）生活貧困，難以負擔營養餐。樂餉社
+             正在支持 150 多家已註冊的前線本地慈善機構提供膳食，其中包括養老院、社區中心、中央廚房和其他食品銀行。 </span>             
+             </p> 
+     
+    
+    
+    
+    
+    
+            
+            <div style="float:right;width: 150px;margin-right: 100px;margin-top: 60px;"><img style="width:300px;" src="19BrotherMing.jpg"/></div>
+          
+            <p style="margin:0pt; orphans:0; text-align:justify; widows:0;margin-top: 50px;">
+            <a href="https://www.google.com.hk/maps/place/278+Tai+Nan+St,+Sham+Shui+Po/@22.3285742,114.1590359,17z/data=!3m1!4b1!4m6!3m5!1s0x340400b38a487abf:0xcfc6c0f9fed80e7e!8m2!3d22.3285693!4d114.1616108!16s%2Fg%2F11c2bp0lrr?entry=ttu" style="font-family:Calibri; font-weight:bold">
+                <span>深水埗北河同行明哥</span>
+            </a>
+            </p>
+                
+            <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+            style="font-family:Calibri;  ; font-style:italic">C卓明，又名明哥，是北河店的老闆。該餐廳自 1983 年以來一直以其美味又實惠的餐點而聞名於當地顧客。目前明哥每週一、週二、週四和周六免費分發 1,000 多個便當盒。</span>
+            地點：深水埗大南街278號 </p> 
+    
+            
+    
+    
+    
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">&#xa0;</span></p>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">物資捐助</span></p>
+                <br>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+                <a href = "https://www.crossroads.org.hk/global-distribution/receive-goods/"style="font-family:Calibri; font-weight:bold">
+                    <span>國際十字路會 
+                    </span>
+                </a>
+                </p>
+    
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">是一家總部位於香港的非營利組織，捐贈優質商品給香港內外超過 95 個國家的非政府組織。這些國家已向組織提出物資申請，詳細說明了他們的需求和發展計劃, 批核後便可獲物資捐助。 
+            </span>
+        </p>
+        <br>
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+                <a href = "http://www.5loaves2fish.com/job/job-list.htm" style="font-family:Calibri;  ; font-weight:bold">
+                    <span>五餅二魚</span></a></p>
+    
+        <p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+                style="font-family:Calibri;  ">五餅二魚由一個基督教組織經營。捐贈物品列在網站上，並會不時更新。捐贈的物品包括家具、電子設備和設備等等。
+            </p>
+        
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content: flex-end;">
+            <a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+                <img style="width: 180px;" src="9Whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+        <br>
+        <br>
+
+
+</div>
+
+
+<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+		<a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+		</div>
+	</div> 
+				
+</body>
+</html>

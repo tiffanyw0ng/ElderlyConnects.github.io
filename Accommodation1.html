@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+  <title>页面示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+	   font-size: 23px;
+	   line-height: 150%;
+    }
+	
+    header {
+		background-color: #ffffff;
+      	display: flex;
+      	align-items: center;
+      	justify-content: space-between;
+      	padding: 20px;
+    }
+
+    /* .logo {
+      display: block;
+      margin: 0 auto;
+      width: 180px;
+    } */
+
+    .image {
+      width: 100%; /* 图片宽度占满父容器 */
+      height: auto;
+    }
+
+    .menu {
+		background-color:#a4ddb4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+
+	.menu2 {
+		background-color:#a4ddb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+ 
+	.underline2 {
+	      width: 60%;
+	      height: 2px;
+		  margin-left: 5%;
+	      background-color: #b1b1ef;
+	    margin-bottom: 20px;  
+	    }
+
+	.menu3 {
+	      
+	      padding: 10px;
+		  width: 70%;
+	    }
+    .menu-item {
+      margin: 10px;
+      text-align: center;
+	  text-decoration: none;
+    }
+
+    .menu-item a {
+      color: black;
+      text-decoration: none;
+
+    }
+
+    .menu-item a:hover {
+      color: blue;
+	  text-decoration: none;
+    }
+
+      .underline {
+      width: 80%;
+      height: 2px;
+      background-color: #b1b1ef;
+       margin-bottom: 20px; 
+    }
+.underline2 {
+      width: 60%;
+      height: 2px;
+	  margin-left: 5%;
+      background-color: #b1b1ef;
+      margin-bottom: 20px;
+    }  */
+    .font-size-adjustment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; 
+    }
+
+    .font-size-adjustment span {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+	.font-small {
+      font-size: 18px;
+    }
+
+    .font-medium {
+      font-size: 23px;
+    }
+
+    .font-large {
+      font-size: 26px;
+    }
+	.hmg:hover{
+	         
+	         transform: scale(1,1.1);
+	        
+	      }
+	
+	    .image-grid {
+	        display: flex;
+			flex-wrap: wrap;
+	        justify-content: center;
+	        margin: 30px 0;
+	    height: 200px; /* set a fixed height for the images */
+      }
+		  .image-container {
+  			width: 40%;
+  			margin: 0 15px;
+  			overflow: hidden;
+  			height: 200px;
+  			box-sizing: border-box; /* add this line to include padding within the element's width calculation */
+			}
+
+			  .image-container img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			max-width: 100%;
+			max-height: 100%;
+			} 
+	  
+	      .image-name-container {
+	        background-color: #f4f4f4;
+	        padding: 10px; 
+	        text-align: center;
+			width: 100%;
+			height: 40px;
+			margin-top: 5%;
+	      }
+		  
+	      .image-name {
+	        margin: 0;
+			
+	      } 
+	 
+
+			a {
+			text-decoration: none;
+			}
+	
+			.highlight {
+			background-color: #4CAF50;
+			color: white;
+			padding: 2px 5px;
+			border-radius: 5px;
+			}
+		
+
+	
+  </style>
+  <script>
+    function changeFontSize(size) {
+      var bodyElement = document.getElementsByTagName('body')[0];
+      bodyElement.className = ''; // 清除之前的字体大小类名
+
+      if (size === 'small') {
+        bodyElement.classList.add('font-small');
+      } else if (size === 'medium') {
+        bodyElement.classList.add('font-medium');
+      } else if (size === 'large') {
+        bodyElement.classList.add('font-large');
+      }
+    }
+
+	function highlight(element) {
+  var options = document.querySelectorAll('.search-container span');
+  for (var i = 0; i < options.length; i++) {
+    options[i].classList.remove('highlight');
+  }
+  element.classList.add('highlight');
+}
+	
+
+  </script>
+</head>
+<body>
+	<header>
+		<div style="text-align: center;">
+		  <a href="index1.html"><img class="logo" src="1logo.png" style="width: 180px;"></a>
+		</div>
+		<div class="search-container" style="margin-right: 10%; margin-top: 2%; margin-bottom: 10px;">
+		  <div style="display: inline-block; margin-right: 20px;">
+			<span style="font-size: 25px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('small'); highlight(this)">A </span>
+			<span style="font-size: 30px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('medium'); highlight(this)">A </span>
+			<span style="font-size: 33px; cursor: pointer; margin-right: 10px; display: inline-block;" onclick="changeFontSize('large'); highlight(this)">A </span>
+		  </div>
+		  <div style="display: inline-block;">
+			<a href="Accommodation1.html" style="font-size: 17px; cursor: pointer; margin-right: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">繁體</a>
+			<span style="margin: 0 3px; display: inline-block; vertical-align: middle;">/</span>
+			<a href="Accommodation.html" style="font-size: 17px; cursor: pointer; margin-left: 3px; display: inline-block; vertical-align: middle; padding: 5px; text-decoration: none; color: inherit;" onclick="highlight(this)">English</a>
+		  </div>
+		</div>
+	  </header>
+
+      <img class="image" src="2banner.png"style="vertical-align: top;">
+      <div class="menu">
+          <div class="menu-item">
+          <a href="abouts1.html">關於我們  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Governmentassistance1.html">政府援助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Accommodation1.html">住宿  </a>
+          </div> 
+          <div class="menu-item">
+          <a href="FoodDriveandItemsGiveaway1.html">食物及物品捐助  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Employment1.html">就業機會  </a>
+          </div>
+          <div class="menu-item">
+          <a href="GoldenAgeConnec1.html">智者連繫  </a>
+          </div>
+          <div class="menu-item">
+          <a href="Howtohelp1.html">你的幫助  </a>
+          </div>
+          
+          
+      </div>
+    </div>
+    <br>
+
+    <div style="margin-left: 20%; margin-right: 20%;">
+
+
+			
+		<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">住宿</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			<div style="float:right;width: 200px;margin-right: 10px;" ><img style="width: 350px; " src="15 home.jpg"/></div>
+			<span
+				style="font-family:Calibri;  ">香港特區政府明白為長者提供穩定生活的重要性，並提供以下計劃或協助：
+            </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ;"><a href="#Elderlyhome">安老院</a> </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Publicrentalhousing">公屋優先計劃</a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Assistanceforstayhome">協助留在家中的老人服務 </a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Residentialcareservice">院舍照顧服務券計劃 </a>
+				</span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Centralizedwaitlistfor">長期護理的集中候補名單</a>
+				 </span></p>
+		<p style="margin:0pt 0pt 0pt 36pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ; "><a href="#Buildingmaintenance">樓宇維修資助計劃</a>
+				</span></p>
+				
+				
+		<br>
+        <br>
+		<br>
+		<p id="Elderlyhome" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">安老院
+            </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">尋找安老院？</span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">長者能會因著各種原因選擇去尋找安老院。</span><span
+				style="font-family:Calibri;  "> 一些最常見的原因包括:  </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">- 需要持續的醫療護理: 患有慢性疾病或殘疾的長者在自己家中無法獲得的專業醫療護理。養老院可以提供熟練的護理、康復服務和醫療監測，以幫助管理他們的健康需求; 
+            </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">- 許多長者在洗澡、穿衣和如廁等活動中遇到困難，這使得他們難以獨立生活。養老院在這些和其他日常工作中提供幫助，確保居民能夠盡可能地保持獨立;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">- 獨居的長者可能會感到孤獨和社會孤立，這會對他們的身心健康產生負面影響。在安老院，住戶有機會與他人互動和參與社交活動，這有助於消除孤獨感並提高他們的生活質量;
+            </span></p>
+		<p style="margin:0pt 0pt 0pt 0pt; orphans:0; text-align:justify; text-indent:-18pt; widows:0"><span
+				style="font-family:宋体;  "></span><span
+				style="font:7.0pt 'Times New Roman'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+				style="font-family:Calibri;  ">- 對於一些長者來說，由於行動不便或其他因素，他們在自己家中的安全可能是一個問題。養老院旨在提供安全可靠的生活環境，配備扶手和緊急呼叫系統等功能，以確保居民在需要時能夠迅速獲得幫助。</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">如果您正在尋找安老院，請參閱社會福利署編制的</span><span 
+				style = "font-family: Calibri"></span><a href = "https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_listofresi/">安老院名單。</a>
+			</span></p>
+		<br>
+        <br>
+        <br>
+        <br>
+            
+		
+		<p id="Publicrentalhousing" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">公屋優先計劃 </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">更喜歡一個人住？ </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">為照顧長者居住，優先保障長者安居，政府推出以下優先安居計劃: 
+            </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">單身長者優先計劃</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">長者優先計劃</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">和諧家庭優先計劃 </span></p>
+				<br>
+                <br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">根據這些計劃，申請人必須符合申請公屋的一般資格條件。申請通常會比普通家庭的申請更早得到處理。有關公屋資格的入息及資產限額，請</span><span
+				style="font-family:Calibri;  ;  "><a href="https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/index.html">按此。</a></span></p>
+		
+				<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span style="font-family:Calibri;">有關公屋的更多信息，請單擊<a href="https://www.housingauthority.gov.hk/en/common/pdf/global-elements/forms/flat-application/HD273.pdf">此處。
+                </a></span></p>
+				
+		<p style="font-family:Calibri;  ">單身長者優先計劃</span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">申請人必須年滿58歲或以上，並於編配單位時年滿60歲。
+            </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">長者優先計劃</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">兩名或以上同意同居於同一公屋單位的 58 歲或以上長者（包括無親屬關係人士）均可申請。
+            </span></p><br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">和諧家庭優先計劃 </span></p>
+				
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">推出此計劃旨在鼓勵年輕家庭照顧年長的父母或親戚，促進家庭和睦。此計劃為有長者家庭的公屋申請者提供優先編配機會。合資格的家庭可選擇合住一間或合住兩間附近的單位，視乎選擇的地區和適合家庭的單位數目而定。 
+            </span></p>
+        <br>
+        <br>
+
+		<p style="margin:0pt"><br style="page-break-before:always; clear:both" /></p>
+		<p id="Assistanceforstayhome" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">協助留在家中的老人服務 
+			</span></p>
+			
+			<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">對於希望留在自己家中或尚未找到首選安老院的長者，有多種選擇可以幫助減輕照顧他們的負擔並保持生活滿意度。
+            </span></p>
+				<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(a) 日託中心 </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">社會福利署提供一份完整的各區政府資助或非資助日間護理服務</span>
+				style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_daycarecen/">中心名單</a></span><span
+				style="font-family:Calibri;  ;  ">。一些中心還提供往返中心的巴士接送服務, 以便利長者交通上的安排 。</span></p>
+		
+		</p>
+	
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(b) 加強家庭和社區護理服務</span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">長者可以僱用幫手協助處理日常工作和家務。它可以為那些需要持續護理的人提供寶貴的幫助和支持，使他們能夠保持獨立並儘可能長時間地待在自己家裡。
+            </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">社會福利署為60歲或以上的體弱人士，通過安老服務標準化評估機制評估及推薦接受社區照顧服務或院舍照顧服務，推出「加強家居及社區照顧服務」長者個人的功能水平，並提供支持以加強家庭凝聚力。 
+            </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">有關更多信息和應用，請參閱
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_csselderly/id_enhancedho/">此處。</a></span><span</p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">(c) 住宿暫托服務</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">在某些情況下，照顧長者的人可能會因為各種原因需要休息一下。 住宿暫托服務是為需要一定程度的個人協助並居住在社區的長者提供的一種短期護理。
+                這些服務的主要目的是為負責照顧他們的家庭成員或照顧者提供臨時救濟。這些服務通常在療養院或輔助生活設施等住宅環境中提供，服務時間從幾天到幾週不等。
+                住宿暫托服務的主要目標是為老年人提供高質量的護理和支持，同時也為他們的護理人員提供急需的休息時間。欲了解更多信息，請參閱
+				
+				<a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_respiteser/">此處。</a>
+				</span>
+		</p>
+
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			<br>
+			<span
+				style="font-family:Calibri;  ">申請程序</span><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p id="Residentialcareservice" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">應由社會工作者轉介入住暫托服務。長者或其家人可聯絡個案服務單位，後者會評估長者的需要，並在認為合適的情況下轉介至有關的安老院舍或護養院。
+            </span></p>
+			<br>
+			<p style="font-size: smaller;margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-style:italic">個案服務單位的例子 - 綜合家庭服務中心、醫務社會服務單位、地區長者社區中心、鄰里長者中心、長者社會中心、長者日間護理中心/長者單位、改善家居及社區照顧服務隊、綜合院舍護理服務團隊和家庭幫助團隊。</span></p>
+				<br>
+				<br>
+				<span style="font-family:Calibri;  ; font-weight:bold">院舍照顧服務券計劃 
+                </span><span style="font-family:Calibri;  "> </span>
+				<br>
+				<span style="font-family:Calibri;">為支持希望留在家中的長者，並應對安老院舍的高需求，政府推出院舍照顧服務券計劃。
+
+                    在這個計劃下，長者可以選擇適合他們個人需要的社區照顧服務或在舒適的家中安老。
+                    
+                    長者可以使用院舍照顧服務券計劃下的零錢, 在及在另一中心使用，因此這種計劃被稱為“錢跟人走計劃”。</span></p>
+				<br>
+				<span style="font-family:Calibri;  ">申請資格 
+                </span>
+			<p style="margin:0pt; orphans:0; text-align:justify; widows:0;">
+				<span style="font-family:Calibri;  ">所有經社會福利署安老服務標準化評估機制評估及推薦接受院舍照顧服務，並輪候入住護理安老院的長者。</span>
+			</p>
+	
+			</p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">有關更多信息和應用，請參閱
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_residentia/id_psrcsv/"></a>此處。</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span</p>
+			
+		<br>
+		<br>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p id="Centralizedwaitlistfor" style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ; font-weight:bold">長期護理的集中候補名單 
+            </span><span
+				style="font-family:Calibri;  ;  ">  </span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">申請不同類型的養老服務往往涉及大量的文書工作，這對長者和他們的照顧者來說可能是一項艱鉅的任務。
+
+                但是，對於那些沒有特別偏好的長者來說，還有一個選擇。
+                
+                通過申請集中輪候資助長期護理服務，長者有可能更早獲得所需的護理，減輕照顧者的負擔。這種集中式等候名單系統有助於簡化尋求長期護理服務的老年人的申請流程，使他們更容易及時獲得所需的護理。</span>
+                
+
+            </p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">有關更多信息和應用，請參閱
+			</span><span style="font-family:Calibri;  ;  "><a href="https://www.swd.gov.hk/en/index/site_pubsvc/page_elderly/sub_centralwai/">此處。</a></span><span
+				style="font-family:Calibri;  ;  "> </span></p>
+	
+		<br>
+        <br>
+        <br>
+	
+				<div style="float:right;width: 100px;margin-right: 100px;" ><img style="width: 120px; " src="16maintenace cost.jpg"/></div>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span>
+				</p>
+		<p id="Buildingmaintenance" style="margin:0pt; orphans:0; text-align:justify; widows:0">
+			
+			<span 
+				style="font-family:Calibri;  ; font-weight:bold">樓宇維修資助計劃 </span></p>
+				
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">樓宇維修的金額可能非常大，特別是對於低收入的長者來說。 
+
+                該計劃向有需要的自住業主提供經濟援助，以資助自住樓宇的維修費用、改善失修樓宇的狀況及提升居所的安全性。 </span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">&#xa0;</span></p>
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">每項資助申請上限為港幣八萬元。每名合資格申請人及其合法配偶（如已婚）可獲發合共最高 80,000 港元的免稅額。
+            </span></p>
+
+		<p style="margin:0pt; orphans:0; text-align:justify; widows:0"><span
+				style="font-family:Calibri;  ">有關申請方法或更詳細訊息,請參閱 </span><span
+				style="font-family:Calibri;  ;  "><a href="https://brplatform.org.hk/en/subsidy-and-assistance/integrated-building-rehabilitation-assistance-scheme/schemes-for-individual-owners/building-maintenance-grant-scheme">此處。</a></span></p>
+		<br>
+        <br>
+        <br>
+
+				<br>
+
+			<div style="display: flex; justify-content: flex-end;">
+				<a href="https://wa.me/85268408740" style="display: block; margin-top: -20px;">
+					<img style="width: 180px;" src="9CWhatsapp.png" alt="WhatsApp">
+				</a>
+			</div>
+			<br>
+			<br>
+
+
+</div>
+
+<div class="menu2">
+	<div style="width: 70%; padding: 10px;font-size:20px;">
+		<a href="Privacy1.html">私隱政策</a>&nbsp;&nbsp;&nbsp;<a href="Disclaimer1.html">免責聲明</a>
+		</div>
+	</div> 
+				
+</body>
+</html>
